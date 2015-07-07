@@ -6,7 +6,7 @@ class hoge
 {
     static void Main(string[] args)
     {
-        Fibonucci f = new Fibonucci();
+        Fibonucci f = new Fibonacci();
         // F(0)..F(39)までを列挙する
         // オーバーフローする限界はF(46)
         foreach (var i in f.GetSequence().Take(47))
@@ -17,7 +17,7 @@ class hoge
     }
 }
 
-class Fibonucci
+class Fibonacci
 {
     int[] array = new int[] { 0, 1 };
     public IEnumerable<int> GetSequence()
