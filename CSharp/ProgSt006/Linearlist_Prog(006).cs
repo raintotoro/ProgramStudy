@@ -5,29 +5,22 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-class linearlist_Prog
+class Linearlist_Prog
 {
-    static void Main(string[] args){
-        // 双方向リスト練習
-        LinkedList<string> testlist = new LinkedList<string>();
+    static void Main(string[] args)
+    {
+        var myList = new MyList<String>();
 
         // リストに(ノード)追加が可
-        testlist.AddFirst("dog");
-        testlist.AddFirst("fox");
-        testlist.AddLast("nuko");
+        var list1 = myList.Add("raintotoro").Add("am").Add("I");
+        Console.WriteLine(list1);
+        // Get(数字)でリストのデータを指定可能
+        Console.WriteLine(list1.Get(2));
 
-
-        foreach (string x in testlist)
-        {
-            Console.WriteLine(x);
-        }
-
-        Console.WriteLine("FirstNext => {0}", testlist.First.Next.Value);
-        Console.WriteLine("First => {0}", testlist.First.Value);
-        Console.WriteLine("Last => {0}", testlist.Last.Value);
-       
+        
         Console.WriteLine("Press any key to exit.");
         Console.ReadKey();
     }
 
 }
+
